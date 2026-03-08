@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-jost: "Jost", sans-serif;
+  --font-lobster: "Lobster", sans-serif;
+
+  --animate-moveY: moveY 3s linear infinite;
+  --animate-rotating: rotating 15s linear infinite;
+  --animate-scaleUp: scaleUp 3s linear infinite;
+}
+
+body {
+  @apply bg-green-950 text-white font-jost tracking-wider;
+}
+
+section {
+  @apply py-20 lg:py-28;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl xl:text-5xl font-bold;
+}
+
+.nav-link {
+  @apply text-lg font-bold duration-300;
+}
+
+.nav-link:hover {
+  @apply text-yellow-500;
+}
+
+.btn {
+  @apply border border-yellow-500 bg-yellow-500 rounded-md px-5 py-2;
+}
+
+.btn span {
+  @apply font-bold;
+}
+
+.btn:hover {
+  @apply opacity-90;
+}
+
+.btn_outline {
+  @apply bg-transparent;
+}
+
+.btn_outline:hover {
+  @apply bg-amber-500;
+}
+
+@keyframes moveY {
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
