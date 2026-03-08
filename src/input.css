@@ -64,6 +64,10 @@ h2 {
   @apply bg-amber-500;
 }
 
+.swiper-pagination-bullet {
+  @apply bg-green-500 w-3 h-3;
+}
+
 @keyframes moveY {
   50% {
     transform: translateY(-1rem);
